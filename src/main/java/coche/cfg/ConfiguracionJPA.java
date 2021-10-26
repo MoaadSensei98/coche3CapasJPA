@@ -31,16 +31,10 @@ public class ConfiguracionJPA {
 		DriverManagerDataSource ds = new DriverManagerDataSource();
 		//configuracion para mysql
 		ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
-		//IMPORTANTE, el esquema de bbdd debe de estar creado (jpa_spring)
+		//IMPORTANTE, el esquema de bbdd debe de estar creado (bbdd)
 		ds.setUrl("jdbc:mysql://localhost:3306/bbdd?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC");
 		ds.setUsername("root");
-		ds.setPassword("");
-		//Configuracion H2
-		/*
-		ds.setDriverClassName("org.h2.Driver");
-		ds.setUrl("jdbc:h2:file:c:/h2/pruebaJpa");
-		ds.setUsername("sa");
-		ds.setPassword("");*/
+		ds.setPassword(""); 
 		return ds;
 	}
 
